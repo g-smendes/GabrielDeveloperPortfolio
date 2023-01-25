@@ -1,4 +1,3 @@
-Projeto baseado no vídeo recomendado abaixo, do canal Bedimcode.
 
 Recursos utilizados:
 

@@ -106,36 +106,3 @@ sr.reveal(`.home__data, .home__img,
     interval: 200
 })
 
-/*=============Remove the size when cv is dowloaded======
-function removeScale(){
-    document.body.classList.remove('.cv')
-}
-
-/*=================== Generate PDF ======================*/
-let areaCv = document.getElementById('area-cv')
-
-let resumeButton = document.getElementById('resume-button')
-
-/*Html2pdf options*/
-let opt = {
-  margin:       0,
-  filename:     'ResumeCv.pdf',
-  image:        { type: 'jpeg', quality: 0.98 },
-  html2canvas:  { scale: 4 },
-  jsPDF:        { format: 'a4', orientation: 'portrait' }
-};
-//Functiom to call areaCv and Html2PDF options
-function generateResume(){
-    html2pdf(areaCv, opt)
-}
-
-resumeButton.addEventListener('click', () =>{
-    //1.The class .scale-cv is added to the body, where it reduces the size of 
-    scaleCv()
-
-    //2. The PDF is generated
-    generateResume()
-
-    //3. The .scale-cv class is removed from body after 5 seconds to return to 
-    setTimeout(removeScale, 5000)
-})
